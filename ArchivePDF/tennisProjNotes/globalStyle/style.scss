@@ -1,0 +1,253 @@
+// @import 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css';
+// included fonts
+@font-face {
+  font-family: Fira;
+  src: url('./Fonts/FiraCode-Regular.otf');
+}
+
+@font-face {
+  font-family: Flott;
+  src: url('./Fonts/Flottflott.ttf');
+}
+
+@font-face {
+  font-family: Habel;
+  src: url('./Fonts/Habel.otf');
+}
+
+@font-face {
+  font-family: HackNerd;
+  src: url('./Fonts/Hack\ Bold\ Italic\ Nerd\ Font\ Complete.ttf');
+}
+
+@font-face {
+  font-family: Fura;
+  src: url('./Fonts/Fura\ Code\ Retina\ Nerd\ Font\ Complete\ Mono\ Windows\ Compatible.otf');
+}
+
+@font-face {
+  font-family: FiraBold;
+  src: url('./Fonts/FiraCode-Bold.otf');
+}
+
+// global styles
+$global-font: Fira;
+$global-font-size: 1em;
+$page-width: 8.5in;
+$page-height: 11in;
+// single note styles
+$background-note: white;
+$main-border: 2px black solid;
+$main-margin: 15px auto;
+$padding-note: 30px;
+$mdContainer-margin: 20px auto;
+$mdContainer-background-color: lightgreen;
+$mdContainer-border: 0.9px lightgrey dashed;
+$mdContainer-padding: 15px;
+//blockquote styles
+$blockquote-border-left: green 2px solid;
+$blockquote-background: lightgrey;
+$blockquote-border-radius-bottom-right: 0%;
+$blockquote-border-radius-top-left: 0%;
+// title styling
+$title-font-style: italic;
+$title-margin: 15px auto;
+$subtitle-margin: 0 auto 15px auto;
+$title-text-dec: underline overline;
+$subtitle-text-dec: underline;
+// list item styling
+$li-padding-top-bottom: 1px;
+// images in note styles
+$display-image: block;
+$width-image: 350px;
+$height-image: 350px;
+$margin-image: 0 auto;
+$padding-image: 15px 0;
+// multiple grouped images styles
+$multiple-image-padding: 10px;
+// code styling
+$font-code: Fira;
+$width-code: auto;
+$height-code: fit-content;
+$background-code: lightgrey;
+$margin-code: 15px auto 15px auto;
+$font-size-code: 12px;
+// figcaption styling
+$color-figcaption: rgb(66,
+61,
+61);
+$font-style-figcaption: italic;
+$font-size-figcaption: 9.5px;
+$margin-figcaption: 0 0 15px 0;
+// table styling
+$border-table: 0.5px black solid;
+$border-thead: 2px black solid;
+$table-padding: 5px;
+$table-margin: 15px auto;
+// actual styling
+@page {
+  size: $page-width $page-height;
+  -relaxed-page-width: $page-width;
+  -relaxed-page-height: $page-height;
+  margin: 15px;
+  border: 'solid teal 2px';
+}
+
+.iconleft {
+  position: absolute;
+  left: 95%;
+  top: 2%;
+}
+
+.iconright {
+  position: absolute;
+  left: 3%;
+  top: 2%;
+}
+
+.mdContainer {
+  margin: $mdContainer-margin;
+  border: $mdContainer-border;
+  padding: $mdContainer-padding;
+}
+
+.main {
+  margin: $main-margin;
+  font-family: $global-font;
+  border: $main-border;
+  background-color: $background-note;
+  padding: 0 $padding-note 0 $padding-note;
+  p:not(p>img) {
+    // border-left: green 2px solid;
+    padding-left: 15px;
+  }
+  blockquote {
+    border-left: $blockquote-border-left;
+    background-color: $blockquote-background;
+    border-top-left-radius: $blockquote-border-radius-top-left;
+    border-bottom-right-radius: $blockquote-border-radius-bottom-right;
+  }
+  important {
+    margin: 0 auto;
+    padding: 15px;
+    display: block;
+    background: lightcoral;
+    width: 70%;
+    border-radius: 20%;
+  }
+  warning {
+    margin: 0 auto;
+    padding: 15px;
+    display: block;
+    background: lightyellow;
+    width: 70%;
+    border-radius: 20%;
+  }
+  h1 {
+    text-align: center;
+    margin: $title-margin;
+    text-decoration: $title-text-dec;
+    font-style: $title-font-style;
+    font-family: FiraBold;
+  }
+  h2 {
+    text-align: center;
+    margin: $subtitle-margin;
+    text-decoration: $subtitle-text-dec;
+    font-family: FiraBold;
+  }
+  h3 {
+    font-family: FiraBold;
+  }
+  li {
+    padding: $li-padding-top-bottom 0 $li-padding-top-bottom 0;
+  }
+  &>ul {
+    position: relative;
+    list-style: none;
+    margin-left: 25px;
+    padding-left: 1.2em;
+    &>li:before {
+      content: '>=>'; // position: absolute;
+      left: 0;
+      margin-right: 15px; // font-family: Fira;
+    }
+    &>li>ul {
+      list-style: none;
+      &>li:before {
+        content: '==>'; // position: absolute;
+        left: 0;
+        margin-right: 15px; // font-family: Fira;
+      }
+      &>li>ul {
+        list-style: none;
+        &>li:before {
+          content: '>->';
+          left: 0;
+          margin-right: 15px; // font-family: Fira;
+        }
+        &>li>ul {
+          list-style: none;
+          &>li:before {
+            content: '-->';
+            left: 0;
+            margin-right: 15px; // font-family: Fira;
+          }
+        }
+      }
+    }
+  }
+  &>ol {
+    position: relative;
+    margin-left: 50px;
+    padding-left: 1.2em;
+    &>li:before {
+      left: 0;
+      margin-right: 15px;
+    }
+  }
+  img {
+    display: $display-image;
+    width: $width-image;
+    height: $height-image;
+    margin: $margin-image;
+    padding: $padding-image;
+  }
+  pre {
+    background-color: $background-code; // border: 2px black dashed;
+    width: $width-code;
+    height: $height-code;
+  }
+  pre>code {
+    font-family: $font-code; // font-size: $font-size-code;
+    // line-height: 19px;
+  }
+  figcaption {
+    color: $color-figcaption;
+    font-style: $font-style-figcaption;
+    font-size: $font-size-figcaption;
+    margin: $margin-figcaption;
+  }
+  table {
+    margin: $table-margin;
+    border: $border-table;
+    thead {
+      th {
+        background-color: lightgray;
+        border: $border-thead;
+        padding: $table-padding;
+      }
+    }
+    tbody {
+      td {
+        border: $border-thead;
+        padding: $table-padding;
+      }
+    }
+  }
+}
+
+.mjx-math {
+  font-size: 16px;
+  padding: 15px;
+}

@@ -1,0 +1,241 @@
+<html><body><!-- -relaxed-mathjax-everywhere--><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link href="./styles/dracula.css" rel="stylesheet"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"><script src="./highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="./raphael.js"></script><script src="./flowchart.js"></script><title>Note</title><style>@font-face {
+  font-family: Fira;
+  src: url("./Fonts/FiraCode-Regular.otf"); }
+
+@font-face {
+  font-family: Flott;
+  src: url("./Fonts/Flottflott.ttf"); }
+
+@font-face {
+  font-family: Habel;
+  src: url("./Fonts/Habel.otf"); }
+
+@font-face {
+  font-family: HackNerd;
+  src: url("./Fonts/Hack Bold Italic Nerd Font Complete.ttf"); }
+
+@font-face {
+  font-family: Fura;
+  src: url("./Fonts/Fura Code Retina Nerd Font Complete Mono Windows Compatible.otf"); }
+
+@font-face {
+  font-family: FiraBold;
+  src: url("./Fonts/FiraCode-Bold.otf"); }
+
+@page {
+  size: 8.5in 11in;
+  -relaxed-page-width: 8.5in;
+  -relaxed-page-height: 11in;
+  margin: 15px;
+  border: 'solid teal 2px'; }
+
+.iconleft {
+  position: absolute;
+  left: 95%;
+  top: 2%; }
+
+.iconright {
+  position: absolute;
+  left: 3%;
+  top: 2%; }
+
+.mdContainer {
+  margin: 20px auto;
+  border: 0.9px lightgrey dashed;
+  padding: 15px; }
+
+.main {
+  margin: 15px auto;
+  font-family: Fira;
+  border: 2px black solid;
+  background-color: white;
+  padding: 0 30px 0 30px; }
+  .main p {
+    padding-left: 15px; }
+  .main blockquote {
+    border-left: green 2px solid;
+    background-color: lightgrey;
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%; }
+  .main important {
+    margin: 0 auto;
+    padding: 15px;
+    display: block;
+    background: lightcoral;
+    width: 70%;
+    border-radius: 20%; }
+  .main warning {
+    margin: 0 auto;
+    padding: 15px;
+    display: block;
+    background: lightyellow;
+    width: 70%;
+    border-radius: 20%; }
+  .main h1 {
+    text-align: center;
+    margin: 15px auto;
+    text-decoration: underline overline;
+    font-style: italic;
+    font-family: FiraBold; }
+  .main h2 {
+    text-align: center;
+    margin: 0 auto 15px auto;
+    text-decoration: underline;
+    font-family: FiraBold; }
+  .main h3 {
+    font-family: FiraBold; }
+  .main li {
+    padding: 1px 0 1px 0; }
+  .main > ul {
+    position: relative;
+    list-style: none;
+    margin-left: 25px;
+    padding-left: 1.2em; }
+    .main > ul > li:before {
+      content: '>=>';
+      left: 0;
+      margin-right: 15px; }
+    .main > ul > li > ul {
+      list-style: none; }
+      .main > ul > li > ul > li:before {
+        content: '==>';
+        left: 0;
+        margin-right: 15px; }
+      .main > ul > li > ul > li > ul {
+        list-style: none; }
+        .main > ul > li > ul > li > ul > li:before {
+          content: '>->';
+          left: 0;
+          margin-right: 15px; }
+        .main > ul > li > ul > li > ul > li > ul {
+          list-style: none; }
+          .main > ul > li > ul > li > ul > li > ul > li:before {
+            content: '-->';
+            left: 0;
+            margin-right: 15px; }
+  .main > ol {
+    position: relative;
+    margin-left: 50px;
+    padding-left: 1.2em; }
+    .main > ol > li:before {
+      left: 0;
+      margin-right: 15px; }
+  .main img {
+    display: block;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    padding: 15px 0; }
+  .main pre {
+    background-color: lightgrey;
+    width: auto;
+    height: fit-content; }
+  .main pre > code {
+    font-family: Fira; }
+  .main figcaption {
+    color: #423d3d;
+    font-style: italic;
+    font-size: 9.5px;
+    margin: 0 0 15px 0; }
+  .main table {
+    margin: 15px auto;
+    border: 0.5px black solid; }
+    .main table thead th {
+      background-color: lightgray;
+      border: 2px black solid;
+      padding: 5px; }
+    .main table tbody td {
+      border: 2px black solid;
+      padding: 5px; }
+
+.mjx-math {
+  font-size: 16px;
+  padding: 15px; }
+#currentUI {
+  width: auto;
+  height: 75%; }
+</style></head><body><div class="main"><h1>Tennis Project i:fab fa-react:::::::</h1>
+<h3>Motivation:</h3>
+<p>I wanted to practice on some of my JS i:fab fa-js::::::: skills because I really enjoyed my time making my personal webpage and I wanted to do another web-based project, one that is personal to me.</p>
+<p>I had previously done a python-based statistical analysis of Federer, Nadal, Djokovic, Murray and Wawrinka to impress some people in the /r/tennis subreddit. It was very simple, all it did was look at the average match-length and number of sets in all of their careers. I cloned a <a href="https://github.com/JeffSackmann/tennis_atp">Github Repo</a> and parsed through all the csv files with python. In the end, I ended up generating this poorly formatted plot:</p>
+<p><img src="./Images/tennisProj/AverageRank.png" alt="Average Rank Plot"></p>
+<h3>Web Scraper:</h3>
+<p>I'm starting out making a simple web scraper in javascript. This webscraper scrapes the ATP World Tour Site for a pre-defined set of big names:</p>
+<pre><code class="language-javascript">    const mapping = {
+            'Roger Federer': 'https://www.atpworldtour.com/en/players/roger-federer/f324/rankings-history',
+            'Nick Kyrgios': 'https://www.atpworldtour.com/es/players/nick-kyrgios/ke17/rankings-history',
+            'Rafael Nadal': 'https://www.atpworldtour.com/en/players/rafael-nadal/n409/rankings-history',
+            'Novak Djokovic': 'https://www.atpworldtour.com/en/players/novak-djokovic/d643/rankings-history',
+            'Andy Murray': 'https://www.atpworldtour.com/en/players/andy-murray/mc10/rankings-history'
+        };
+</code></pre>
+<p>As you can see, I have the URLs that will be parsed. Later, I plan on adding more to the scraper that would let you choose the player. I'm thinking right now it would follow the following:</p>
+<ul>
+<li>Use <a href="https://github.com/GoogleChrome/puppeteer">puppeteer</a> to crawl the ATP main page, then search the player
+<ul>
+<li>If the player is there then grab the base url and proceed to the second part</li>
+<li>I not, use error-handling to make sure that the user knows the player is not in the ATP database (or they spelled the name wrong)</li>
+</ul>
+</li>
+<li>The second part uses <a href="https://github.com/cheeriojs/cheerio">CheerioJS</a> and <a href="https://github.com/request/request">request</a> as well as an off-shoot (<a href="https://github.com/request/request-promise">request-promise</a>) to load html, parse the html, and return an asynchronous <code>Promise</code>.</li>
+</ul>
+<p>As of now, the scraper returns an object that looks like this (this is for Andy Murray):</p>
+<pre><code class="language-javascript">{ 
+'2018/06/18': 22,
+'2018/06/11': 21,
+'2018/05/28': 22,
+'2018/05/21': 22,
+'2018/05/14': 18,
+'2018/05/07': 12,
+'2018/04/30': 12,
+'2018/04/23': 12,
+'2018/04/16': 13,
+'2018/04/09': 13,
+'2018/04/02': 13,
+'2018/03/19': 12,
+'2018/03/05': 13,
+'2018/02/26': 13,
+'2018/02/19': 14,
+'2018/02/12': 14,
+'2018/02/05': 13,
+'2018/01/29': 13,
+'2018/01/15': 14 
+}
+</code></pre>
+<p>One thing that I do have to consider is how configure the eventual react i:fab fa-react::::::: to be able to use nodeJS' i:fab fa-node-js::::::: <code>require</code> module feature. I am currently reading this <a href="https://www.robinwieruch.de/minimal-react-webpack-babel-setup/">guide</a>. It turns out that, although <code>require</code> is very popular and thouroughly used in nodeJS, it is not native to most browsers (yet). Therefore, I need to configure i::::Babel:::: (the compiler) and i::::Webpack:::: (the file bundler) to make use of it.</p>
+<h3>UI</h3>
+<p>As mentioned, this will be a react i:fab fa-react::::::: application. The reason I chose this is for two reasons:</p>
+<ol>
+<li>The last applications I built [My Personal Webpage(https://sammy-alhashemi.herokuapp.com/), which was an angular-express i:fab fa-angular::::::: app, so I wanted to do some react i:fab fa-react::::::: again.</li>
+<li>React i:fab fa-react::::::: can produce nice modular, code that is easy to read and understand what is happening. The component lifecycle is also intuitive.</li>
+</ol>
+<p>I started writing the current UI on <a href="https://stackblitz.com/edit/react-b9vonu">stackblitz</a> just for convinience sake. Also because it lets you download the code later. As of now, I have four main components:</p>
+<ul>
+<li>The <code>Navbar</code> at the top
+<ul>
+<li>displays the Players names I want to analyze (RF, RN, ND, AN)</li>
+<li>Working on styling to give a modern look.</li>
+</ul>
+</li>
+<li>The <code>Body</code>
+<ul>
+<li>Currently styled with a <code>linear-gradient</code> background:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-css">background: 'linear-gradient(to bottom, #1e5799 0%,#2989d8 48%,#207cca 73%,#7db9e8 100%)'
+</code></pre>
+<ul>
+<li>Contained in the body is a <code>Paragraph</code> component that is very simple -&gt; just contains words styled with white font</li>
+<li>Also contained in the body is the <code>Graph</code> component.
+<ul>
+<li>This uses <a href="https://gionkunz.github.io/chartist-js/"><code>ChartistJS</code></a> to place a graph</li>
+<li>To be specific, I used a react i:fab fa-react::::::: Component someone created called <a href="http://fraserxu.me/react-chartist/">react-chartist</a></li>
+<li>Eventually, this graph will display the data gathered from the Webscraper.</li>
+</ul>
+</li>
+</ul>
+<br>
+As of now, the UI looks like this: 
+<p>img::currentUI::::::{alt="Current UI" title="currentUI" src="./Images/tennisProj/currentUI.PNG"}</p>
+</div><script src="./JS/MarkdownTemplatingExtension.js"></script></body></html></body></html>
